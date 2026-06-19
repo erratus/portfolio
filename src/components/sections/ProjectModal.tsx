@@ -73,6 +73,13 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         <div className="flex-1 overflow-y-auto p-6 md:p-10 no-scrollbar space-y-12">
           {/* Cover Hero Banner (Rich ambient grid mesh) */}
           <div className="relative w-full h-[200px] md:h-[280px] rounded-3xl overflow-hidden border border-white/10 bg-[#0d0d0d] flex items-center justify-center p-8 select-none">
+            {project.image && (
+              <img
+                src={project.image}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover opacity-15 filter blur-[1px] saturate-50 pointer-events-none"
+              />
+            )}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.15),transparent_70%)]" />
             <div className="absolute inset-0 bg-linear-to-tr from-purple-glow/5 via-transparent to-cyan-glow/5" />
             
@@ -134,6 +141,23 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               {project.problemStatement}
             </div>
           </div>
+
+          {/* Project Screenshot / Visual Preview */}
+          {project.image && (
+            <div className="space-y-4">
+              <h4 className="font-display font-bold text-sm text-white uppercase tracking-wider flex items-center gap-2">
+                <Workflow className="w-4 h-4 text-cyan-glow" />
+                Visual Interface Preview
+              </h4>
+              <div className="rounded-2xl border border-white/10 bg-[#020202] overflow-hidden p-2 flex justify-center items-center">
+                <img
+                  src={project.image}
+                  alt={`${project.title} Screenshot`}
+                  className="w-full max-h-[400px] object-contain rounded-xl select-none"
+                />
+              </div>
+            </div>
+          )}
 
           {/* Architecture / Design Concept */}
           <div className="space-y-4">

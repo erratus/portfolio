@@ -28,11 +28,13 @@ export interface ProjectDetail {
     filename: string;
     code: string;
   };
+  image?: string;
 }
 
 export const projectsData: ProjectDetail[] = [
   {
     id: "indramala-yoga",
+    image: "/indramala.png",
     title: "Indramala Yoga",
     oneLiner: "A premium static web platform for yoga training, featuring scroll-linked animations and WhatsApp-driven conversions.",
     category: "Web Development",
@@ -94,6 +96,7 @@ export const projectsData: ProjectDetail[] = [
   },
   {
     id: "vitespace",
+    image: "/vitespace.png",
     title: "Vitespace",
     oneLiner: "A Service based Company Website, that serves as a digital workspace for the company and showcase their services.",
     category: "Full-Stack Web Dev",
@@ -220,6 +223,7 @@ export function init3DScene(container: HTMLDivElement) {
   },
   {
     id: "codelens",
+    image: "/codelens.png",
     title: "CodeLens",
     oneLiner: "Privacy-first offline code reviewer powered by local LLMs (Ollama) and a FastAPI + React stack.",
     category: "Developer Tooling",
@@ -282,6 +286,7 @@ async def run_review(payload: CodeReviewPayload):
   },
   {
     id: "visudocai",
+    image: "/visudoc.png",
     title: "VisuDocAI",
     oneLiner: "Full-stack AI document analysis app using OCR and LLMs to parse scanned documents into structured datasets.",
     category: "Computer Vision / NLP",
@@ -345,6 +350,7 @@ async def run_review(payload: CodeReviewPayload):
   },
   {
     id: "chatapp",
+    image: "/chatapp.png",
     title: "💬 CHAT_APP",
     oneLiner: "Real-time chat client and server utilizing Socket.io WebSockets for cross-device instant messaging over LAN.",
     category: "Full Stack Development",
