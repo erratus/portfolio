@@ -321,7 +321,7 @@ export default function HeroSection() {
 
           {/* Download Resume Link */}
           <a
-            href="/information/Suryabhaas_karmakar_resume.pdf"
+            href="/Suryabhaas_karmakar_resume.pdf"
             target="_blank"
             className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-white/8 hover:border-white/20 bg-white/2 hover:bg-white/5 transition-all text-xs text-text-secondary hover:text-white"
           >

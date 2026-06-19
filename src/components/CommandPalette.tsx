@@ -205,7 +205,7 @@ export default function CommandPalette({ isOpen, setIsOpen }: CommandPaletteProp
 
                   <CommandPrimitive.Item
                     value="resume"
-                    onSelect={() => runCommand(() => window.open("/information/Suryabhaas_karmakar_resume.pdf", "_blank"))}
+                    onSelect={() => runCommand(() => window.open("/Suryabhaas_karmakar_resume.pdf", "_blank"))}
                     className="flex items-center justify-between px-3 py-2.5 rounded-lg text-xs text-text-secondary hover:text-white hover:bg-white/5 cursor-pointer transition-colors"
                   >
                     <div className="flex items-center gap-2.5">
