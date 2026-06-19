@@ -167,7 +167,7 @@ export function init3DScene(container: HTMLDivElement) {
       { label: "Rewrite Latency", value: "-2.3s" },
       { label: "Docs Indexed", value: "400K+" }
     ],
-    githubUrl: "https://github.com/erratus/self-learning-rag-mvp",
+    githubUrl: "https://github.com/erratus/Self_learning_rag",
     liveUrl: "None",
     problemStatement: "Traditional RAG systems are static. They apply the same top-K retrieve-and-generate logic to every query, leading to severe issues: query ambiguity results in poor search, missing context causes hallucinations, and repetitive rewriting adds unnecessary LLM latency without self-correction.",
     architectureDescription: "An end-to-end multi-stage pipeline: User Query -> Smart Gated Rewrite -> Hybrid Dense Vector & BM25 Sparse Search -> Cross-Encoder Reranking -> LLM Answer Generation -> LLM-as-Judge Evaluation -> MongoDB Feedback Logs -> Async Learning Loop (dynamically updates Top-K, caches rewrites, generates synthetic recovery guide embeddings, flags bad chunks).",
@@ -235,7 +235,7 @@ export function init3DScene(container: HTMLDivElement) {
       { label: "Review Time", value: "Sub-5s" },
       { label: "API Endpoints", value: "4 Core" }
     ],
-    githubUrl: "https://github.com/erratus/code-reviewer-mcp",
+    githubUrl: "https://github.com/erratus/CodeLens",
     liveUrl: "None",
     problemStatement: "Reviewing proprietary code via public cloud models exposes company Intellectual Property to external servers. Developers need a fast, privacy-preserving, local code review tool that fits into their workspace offline.",
     architectureDescription: "FastAPI Backend (serving tools for reading files, directories, and executing review hooks) paired with a Vite + React + Tailwind frontend. The backend calls Ollama locally via WebSocket/HTTP, ensuring no external network requests are made.",
@@ -298,7 +298,7 @@ async def run_review(payload: CodeReviewPayload):
       { label: "Max File Size", value: "16MB" },
       { label: "Avg Processing", value: "2.8s" }
     ],
-    githubUrl: "https://github.com/erratus/visudocai-mvp",
+    githubUrl: "https://github.com/erratus/VisudocAI",
     liveUrl: "None",
     problemStatement: "Scanned receipts, bills, and PDFs are unstructured. Standard OCR tools only extract raw text, leaving the data hard to parse. Layout changes render traditional template-based regex parsers useless.",
     architectureDescription: "User uploads PDF/Image -> Poppler converts PDF pages to images -> Tesseract OCR extracts raw texts and bounding boxes -> Text is fed to OpenRouter LLMs with layout-preserving prompts -> LLM returns structured JSON data matching custom schemas.",
